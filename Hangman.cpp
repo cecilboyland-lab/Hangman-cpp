@@ -6,6 +6,7 @@ Hangman. The theme will be naming the mutants from Xmen.
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <cctype>
 
 using namespace std;
 
@@ -41,6 +42,7 @@ int main() {
         // Get the letter guessed for the user thats playing.
         cout << " Guess a letter: ";
         cin >> guess;
+        guess = tolower(guess); 
 
         bool found = false;
 
